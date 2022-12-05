@@ -52,8 +52,8 @@ public class IngredienteService {
 
     private IngredienteDTO mapToDTO(Ingrediente ingrediente) {
         IngredienteDTO ingredienteDTO = new IngredienteDTO(ingrediente.getCantidad(),
-                ingrediente.getUnidadMedida(), ingrediente.getProducto().getCodigo(), ingrediente.getProducto().getNombre(),
-                ingrediente.getMateriaPrima().getId(), ingrediente.getMateriaPrima().getNombre());
+                ingrediente.getUnidadMedida(), ingrediente.getMateriaPrima().getId(),
+                ingrediente.getMateriaPrima().getNombre());
 
         ingredienteDTO.setId(ingrediente.getId());
 

@@ -85,7 +85,7 @@ public class PedidoAlProveedorService {
     }
 
     private void checkForExistingPedido (Integer pedidoId)  {
-        if (pedidoAlProveedorRepository.existsById(pedidoId)) {
+        if (!pedidoAlProveedorRepository.existsById(pedidoId)) {
             throw new ResourceNotFoundException("El pedido al proveedor ingresado no existe."); //TODO:excepciones
         }
     }

@@ -2,7 +2,6 @@ package org.ada.gestorgastronomico.controller;
 
 import org.ada.gestorgastronomico.dto.ProductoDTO;
 import org.ada.gestorgastronomico.service.ProductoService;
-import org.apache.catalina.LifecycleState;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

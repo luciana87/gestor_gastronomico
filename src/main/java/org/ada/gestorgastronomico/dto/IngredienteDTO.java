@@ -10,11 +10,6 @@ public class IngredienteDTO {
     @JsonAlias("unidad_medida")
     private String unidadMedida;
 
-    @JsonAlias("codigo_producto")
-    private Integer codigoProducto;
-
-    private String nombreProducto;
-
     @JsonAlias("id_materia_prima")
     private Integer idMateriaPrima;
 
@@ -23,12 +18,9 @@ public class IngredienteDTO {
     public IngredienteDTO() {
     }
 
-    public IngredienteDTO( double cantidad, String unidadMedida, Integer codigoProducto,
-                          String nombreProducto, Integer idMateriaPrima, String nombreMateriaPrima) {
+    public IngredienteDTO( double cantidad, String unidadMedida, Integer idMateriaPrima, String nombreMateriaPrima) {
         this.cantidad = cantidad;
         this.unidadMedida = unidadMedida;
-        this.codigoProducto = codigoProducto;
-        this.nombreProducto = nombreProducto;
         this.idMateriaPrima = idMateriaPrima;
         this.nombreMateriaPrima = nombreMateriaPrima;
     }
@@ -47,14 +39,6 @@ public class IngredienteDTO {
 
     public String getUnidadMedida() {
         return unidadMedida;
-    }
-
-    public Integer getCodigoProducto() {
-        return codigoProducto;
-    }
-
-    public String getNombreProducto() {
-        return nombreProducto;
     }
 
     public Integer getIdMateriaPrima() {
