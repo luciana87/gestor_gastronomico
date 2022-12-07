@@ -22,15 +22,18 @@ public class PedidoAlProveedorController {
 
     @PostMapping
     public ResponseEntity create (@PathVariable String proveedorId, @RequestBody List<PedidoAlProveedorDTO> pedidosAlProveedorDTO){
-
             pedidoAlProveedorService.create2(proveedorId, pedidosAlProveedorDTO);
             return new ResponseEntity(HttpStatus.CREATED);
-
     }
 
     @GetMapping
     public ResponseEntity retrieve () {
         return new ResponseEntity(pedidoAlProveedorService.retrieveAll(), HttpStatus.OK);
+    }
+
+    @GetMapping("/byId/{pedidoId}")
+    public ResponseEntity retrieveByProveedor (@PathVariable Integer pedidoId) {
+        return new ResponseEntity(pedidoAlProveedorService.retrieveById(pedidoId), HttpStatus.OK);
     }
 
     @GetMapping("/{cuitProveedor}")
@@ -46,7 +49,6 @@ public class PedidoAlProveedorController {
 
     @DeleteMapping("/{pedidoAlProveedorId}")
     private ResponseEntity deleteById(@PathVariable Integer pedidoAlProveedorId){
-
         pedidoAlProveedorService.delete(pedidoAlProveedorId);
         return new ResponseEntity(HttpStatus.OK);
     }
@@ -56,9 +58,4 @@ public class PedidoAlProveedorController {
                 pedidoAlProveedorService.modify(pedidoAlProveedorId, fieldsToModify );
                 return new ResponseEntity(HttpStatus.OK);
     }
-
-
-
-
-
 }

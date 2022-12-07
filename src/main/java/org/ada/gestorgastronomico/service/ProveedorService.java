@@ -34,7 +34,6 @@ public class ProveedorService {
         return proveedores.stream().map(proveedor -> mapToDTO(proveedor)).collect(Collectors.toList());
     }
 
-    //TODO Excepción
     public ProveedorDTO retrieveById(String proveedorId) {
         Optional<Proveedor> proveedor = proveedorRepository.findById(proveedorId);
         if (proveedor.isEmpty()){
@@ -92,7 +91,7 @@ public class ProveedorService {
     }
     private void checkForExistingProveedor(String cuitProveedor)  {
         if (proveedorRepository.existsById(cuitProveedor)) {
-            throw new ExistingResourceException(); //TODO:excepciones
+            throw new ExistingResourceException();
         }
     }
 

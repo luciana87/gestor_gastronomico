@@ -26,7 +26,7 @@ public class MateriaPrimaService {
         MateriaPrima materiaPrima = mapToEntity(materiaPrimaDTO);
         materiaPrima = materiaPrimaRepository.save(materiaPrima);
 
-        materiaPrimaDTO.setId(materiaPrima.getId()); //TODO: chequear
+        materiaPrimaDTO.setId(materiaPrima.getId());
 
         return materiaPrimaDTO;
     }
@@ -34,10 +34,8 @@ public class MateriaPrimaService {
     public List<MateriaPrimaDTO> retrieveAll(){
         List<MateriaPrima> materiaPrimaList = materiaPrimaRepository.findAll();
         return materiaPrimaList.stream().map(person -> mapToDTO(person)).collect(Collectors.toList());
-
     }
 
-    //TODO: Excepción
     public MateriaPrimaDTO retrieveById (int id) {
         Optional<MateriaPrima> materiaPrima = findById(id);
         if (materiaPrima.isEmpty()){
@@ -45,6 +43,7 @@ public class MateriaPrimaService {
         }
         return mapToDTO(materiaPrima.get());
     }
+
     public Optional<MateriaPrima> findById(Integer materiaPrimaId) {
         return materiaPrimaRepository.findById(materiaPrimaId);
     }
@@ -63,11 +62,10 @@ public class MateriaPrimaService {
         materiaPrima.cargarPrecio(precioUnitario);
         materiaPrimaRepository.save(materiaPrima);
     }
-/*
+
     public void delete(Integer materiaPrimaId) {
         materiaPrimaRepository.deleteById(materiaPrimaId);
     }
-*/
 
     public void modify(Integer materiaPrimaId, Map<String,Object> fieldsToModify) {
         Optional<MateriaPrima> materiaPrima = findById(materiaPrimaId);
@@ -81,13 +79,12 @@ public class MateriaPrimaService {
     private MateriaPrimaDTO mapToDTO(MateriaPrima materiaPrima) {
         MateriaPrimaDTO materiaPrimaDTO = new MateriaPrimaDTO(materiaPrima.getNombre(),
                 materiaPrima.getStock(), materiaPrima.getPrecio());
-        materiaPrimaDTO.setId(materiaPrima.getId());
 
+        materiaPrimaDTO.setId(materiaPrima.getId());
         return materiaPrimaDTO;
     }
 
     private MateriaPrima mapToEntity(MateriaPrimaDTO materiaPrimaDTO) {
-
         MateriaPrima materiaPrima = new MateriaPrima(materiaPrimaDTO.getNombre(),
                 materiaPrimaDTO.getSotck(), materiaPrimaDTO.getPrecio());
 
@@ -96,12 +93,13 @@ public class MateriaPrimaService {
 
     private void checkForExistingMateriaPrima(String nombre)  {
         if (materiaPrimaRepository.existsByNombre(nombre)) {
-            throw new ExistingResourceException(); //TODO:excepciones
+            throw new ExistingResourceException();
         }
     }
+
     private void checkForExistingMateriaPrima(Integer materiaPrimaId)  {
         if (!materiaPrimaRepository.existsById(materiaPrimaId)) {
-            throw new ResourceNotFoundException("La materia prima no existe."); //TODO:excepciones
+            throw new ResourceNotFoundException("La materia prima no existe.");
         }
     }
 

@@ -44,8 +44,6 @@ public class ProductoService {
         return mapToDTOS(productos);
     }
 
-
-
     public ProductoDTO retrieveById(Integer productoId) {
        Optional<Producto> producto = findById(productoId);
        if (producto.isEmpty()){
@@ -92,7 +90,7 @@ public class ProductoService {
 
     private void checkForExistingProducto (Integer productoId)  {
         if (!productoRepository.existsById(productoId)) {
-            throw new ResourceNotFoundException("El producto no existe."); //TODO:excepciones
+            throw new ResourceNotFoundException();
         }
     }
 
@@ -104,6 +102,4 @@ public class ProductoService {
         precioCalculado *= 1.20;
         producto.setPrecio(precioCalculado);
     }
-
-
 }

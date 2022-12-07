@@ -25,7 +25,6 @@ public class ItemPedidoService {
         this.materiaPrimaService = materiaPrimaService;
     }
 
-    //TODO: Excepción a tratar
     public List<ItemPedido> create(List<ItemPedidoDTO> itemsDTO, PedidoAlProveedor pedidoAlProveedor){
 
         //Mapeo la lista de ítemsDTO a una lista de ítems entity
@@ -45,13 +44,14 @@ public class ItemPedidoService {
         }
         return items;
     }
+
     public List<ItemPedidoDTO> mapToDTOS(List<ItemPedido> items) {
         return items.stream().map(itemPedido -> mapToDTO(itemPedido)).collect(Collectors.toList());
     }
 
 
     private ItemPedidoDTO mapToDTO(ItemPedido itemPedido) {
-        ItemPedidoDTO itemPedidoDTO = new ItemPedidoDTO(itemPedido.getPedidoAlProveedor().getNumero(), itemPedido.getId(), itemPedido.getCantidad(),
+        ItemPedidoDTO itemPedidoDTO = new ItemPedidoDTO(itemPedido.getId(), itemPedido.getCantidad(),
                 itemPedido.getPrecioUnitario(), itemPedido.getMateriaPrima().getNombre(), itemPedido.getMateriaPrima().getId());
 
         return itemPedidoDTO;
@@ -60,7 +60,6 @@ public class ItemPedidoService {
     private ItemPedido mapToEntity(ItemPedidoDTO itemPedidoDTO, PedidoAlProveedor pedidoAlProveedor, MateriaPrima materiaPrima) {
 
         ItemPedido itemPedido = new ItemPedido(itemPedidoDTO.getCantidad(), itemPedidoDTO.getPrecioUnitario(), pedidoAlProveedor, materiaPrima);
-
         return itemPedido;
     }
 

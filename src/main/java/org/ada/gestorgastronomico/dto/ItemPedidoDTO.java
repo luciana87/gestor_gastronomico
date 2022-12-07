@@ -12,9 +12,6 @@ public class ItemPedidoDTO {
     @JsonAlias("precio_unitario")
     private double precioUnitario;
 
-    @JsonAlias("numero_pedido")
-    private Integer numeroPedido;
-
     @JsonAlias("materia_prima_id")
     private Integer materiaPrimaId;
 
@@ -29,11 +26,10 @@ public class ItemPedidoDTO {
         this.precioUnitario = precioUnitario;
     }
 
-    public ItemPedidoDTO(Integer numeroPedido, Integer id, double cantidad, double precioUnitario, String nombreMateriaPrima, Integer materiaPrimaId) {
+    public ItemPedidoDTO( Integer id, double cantidad, double precioUnitario, String nombreMateriaPrima, Integer materiaPrimaId) {
         this.id = id;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
-        this.numeroPedido = numeroPedido;
         this.nombreMateriaPrima = nombreMateriaPrima;
         this.materiaPrimaId = materiaPrimaId;
     }
@@ -55,10 +51,6 @@ public class ItemPedidoDTO {
 
     public double getPrecioUnitario() {
         return precioUnitario;
-    }
-
-    public Integer getNumeroPedido() {
-        return numeroPedido;
     }
 
     public Integer getMateriaPrimaId() {

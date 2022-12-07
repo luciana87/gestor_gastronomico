@@ -24,7 +24,6 @@ public class MateriaPrimaController {
         return new ResponseEntity<>(createdMateriaPrimaDTO.getId(), HttpStatus.CREATED);
     }
 
-
     @GetMapping
     public ResponseEntity retrieve(){
         return new ResponseEntity(materiaPrimaService.retrieveAll(),HttpStatus.OK);
@@ -36,7 +35,7 @@ public class MateriaPrimaController {
             MateriaPrimaDTO materiaPrimaDTO = materiaPrimaService.retrieveById(materiaPrimaId);
             return new ResponseEntity(materiaPrimaDTO, HttpStatus.OK);
     }
-/*
+
     @DeleteMapping("/{materiaPrimaId}")
     //TODO: SQLIntegrityConstraintViolationException: Cannot delete or update a parent row:
     // a foreign key constraint fails (`proyectoada`.`item_pedido`, CONSTRAINT `fk_item_materia_prima`
@@ -46,7 +45,6 @@ public class MateriaPrimaController {
             materiaPrimaService.delete(materiaPrimaId);
             return new ResponseEntity(HttpStatus.OK);
     }
-*/
 
     @PatchMapping("/{materiaPrimaId}")
     private ResponseEntity modify(@PathVariable Integer materiaPrimaId, @RequestBody Map<String,Object> fieldsToModify){

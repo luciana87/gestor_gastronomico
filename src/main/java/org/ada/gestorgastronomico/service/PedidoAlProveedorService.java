@@ -4,6 +4,7 @@ import org.ada.gestorgastronomico.dto.PedidoAlProveedorDTO;
 import org.ada.gestorgastronomico.entity.ItemPedido;
 import org.ada.gestorgastronomico.entity.PedidoAlProveedor;
 import org.ada.gestorgastronomico.entity.Proveedor;
+import org.ada.gestorgastronomico.exceptions.EmptyFiledException;
 import org.ada.gestorgastronomico.exceptions.ExistingResourceException;
 import org.ada.gestorgastronomico.exceptions.ResourceNotFoundException;
 import org.ada.gestorgastronomico.repository.PedidoAlProveedorRepository;
@@ -65,6 +66,14 @@ public class PedidoAlProveedorService {
         return mapToDTOS(pedidosObtenidos);
     }
 
+    public PedidoAlProveedorDTO retrieveById(Integer pedidoId) {
+        Optional<PedidoAlProveedor> pedidoObtenido = pedidoAlProveedorRepository.findById(pedidoId);
+        if (pedidoObtenido.isEmpty()){
+            throw new ResourceNotFoundException("Pedido no encontrado.");
+        }
+        return mapToDTO(pedidoObtenido.get());
+    }
+
     public void delete(Integer pedidoAlProveedorId) {
         pedidoAlProveedorRepository.deleteById(pedidoAlProveedorId);
     }
@@ -86,10 +95,17 @@ public class PedidoAlProveedorService {
 
     private void checkForExistingPedido (Integer pedidoId)  {
         if (!pedidoAlProveedorRepository.existsById(pedidoId)) {
-            throw new ResourceNotFoundException("El pedido al proveedor ingresado no existe."); //TODO:excepciones
+            throw new ResourceNotFoundException("El pedido al proveedor ingresado no existe.");
         }
     }
 
+    private void validateDTO(List<PedidoAlProveedorDTO> pedidosAlProveedorDTO) {
+        for (PedidoAlProveedorDTO pedidoDTO: pedidosAlProveedorDTO) {
+            if (pedidoDTO.getItems() == null || pedidoDTO.getItems().isEmpty()){
+                throw new EmptyFiledException("ítems");
+            }
+        }
+    }
 
     private PedidoAlProveedorDTO mapToDTO(PedidoAlProveedor pedidoAlProveedor) {
         PedidoAlProveedorDTO pedidoAlProveedorDTO = new PedidoAlProveedorDTO(pedidoAlProveedor.getFecha().toString(),
@@ -99,6 +115,7 @@ public class PedidoAlProveedorService {
 
         return pedidoAlProveedorDTO;
     }
+
     private List<PedidoAlProveedorDTO> mapToDTOS(List<PedidoAlProveedor> pedidos) {
         return pedidos.stream().map(pedidoAlProveedor -> mapToDTO(pedidoAlProveedor)).collect(Collectors.toList());
     }
@@ -115,6 +132,4 @@ public class PedidoAlProveedorService {
         }
         pedidoAlProveedor.setMontoTotal(montoCalculado);
     }
-
-
 }

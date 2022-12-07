@@ -21,4 +21,9 @@ public class ControllerExceptionHandler {
         return new ResponseEntity(e.getMessage(),
                 HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler (EmptyFiledException.class)
+    public ResponseEntity handleException(EmptyFiledException e) {
+        return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
 }

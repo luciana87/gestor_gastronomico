@@ -20,11 +20,10 @@ public class ProveedorController {
     }
 
     @PostMapping
-    public ResponseEntity create (@RequestBody ProveedorDTO proveedorDTO){
+    public ResponseEntity create(@RequestBody ProveedorDTO proveedorDTO){
             ProveedorDTO createdProveedorDTO = proveedorService.create(proveedorDTO);
             return new ResponseEntity(proveedorDTO.getCuit(), HttpStatus.CREATED);
     }
-
 
     @GetMapping
     public ResponseEntity retrieve(){
@@ -61,7 +60,4 @@ public class ProveedorController {
         proveedorService.modify(cuitProveedor, fieldsToModify);
         return new ResponseEntity(HttpStatus.OK);
     }
-
-
-
 }
