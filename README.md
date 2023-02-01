@@ -46,5 +46,5 @@ Este es el proyecto final con nota individual del curso como desarrolladora back
 ### Contacto
 Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquiera de mis redes sociales.
 
-- 📧 <a href="mailto:ch.luciana87@gmail.com" name="mail">Gmail</a>
-- 🔗 <a href="linkedin.com/in/luciana-chaparro-39521221a" name="linkedin" >LnkedIn</a>
+- <a href="mailto:ch.luciana87@gmail.com" name="mail">Gmail</a>
+- 🔗 <a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="linkedin" >LnkedIn</a>
