@@ -15,7 +15,7 @@ Mi nombre es Luciana Chaparro, estoy estudiando para convertirme en desarrollado
 ### Descripción del proyecto
 
 API REST para locales gastronómicos. Gestiona el control de stock de materias primas, los proveedores, los productos y la atención al cliente.
-Hasta el momento se han realizado las siguientes tablas (con sus respectivas relaciones entre ellas):
+El proyecto está en desarrollo, hasta el momento se han realizado las siguientes tablas (con sus respectivas relaciones entre ellas):
 
   - proveedor --> Endpoints: [POST-GET-GETById-DELETEAll-DELETE-PUT-PATCH]
   - pedido_al_proveedor --> Endpoints: [POST-GET-GETByProveedor-DELETE-PATCH]
@@ -48,5 +48,5 @@ Este es el proyecto final con nota individual del curso como desarrolladora back
 
 Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquiera de mis redes sociales.
 
-- <a href="mailto:ch.luciana87@gmail.com" name="mail">Gmail</a>
-- 🔗 <a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="linkedin" >LnkedIn</a>
+-  <a href="mailto:ch.luciana87@gmail.com" name="mail">Gmail</a>
+-  <a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="linkedin" >LnkedIn</a>
