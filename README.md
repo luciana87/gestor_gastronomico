@@ -6,7 +6,7 @@ Mi nombre es Luciana Chaparro, estoy estudiando para convertirme en desarrollado
 ## Índice
 
 - [Descripción del proyecto](#Descripción-del-proyecto)
-- [Herramientas utilizadas](#Herramientas-utilizadas)
+- [Tecnologías utilizadas](#Tecnologías-utilizadas)
 - [Desarrolladores](#desarrolladores)
 - [Contacto](#contacto)
 
@@ -26,7 +26,7 @@ Hasta el momento se han realizado las siguientes tablas (con sus respectivas rel
   - producto --> Endpoints: [POST-GET-GETById-PATCH-DELETE]
 ***
 
-### Herramientas utilizadas
+### Tecnologías utilizadas
 
 - JAVA 8
 - Spring Boot
@@ -39,11 +39,13 @@ Hasta el momento se han realizado las siguientes tablas (con sus respectivas rel
 ***
 
 ### Desarrolladores
+
 Este es el proyecto final con nota individual del curso como desarrolladora backend de ADA ITW, su única desarrolladora es:
 - Luciana Chaparro
 
 ***
 ### Contacto
+
 Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquiera de mis redes sociales.
 
 - <a href="mailto:ch.luciana87@gmail.com" name="mail">Gmail</a>
