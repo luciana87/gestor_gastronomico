@@ -50,4 +50,4 @@ Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquie
 
 <a href="mailto:ch.luciana87@gmail.com" name="Gmail"><img src="https://drive.google.com/file/d/1NgAbAHIOo10mZANFpEQIA5uboKeXcKtJ/view?usp=share_link" width="20px"></a>
 
-<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="LinkedIn"><img src="https://drive.google.com/file/d/1VNyi5i573AXTxIVCLXZY5WMAaY91OXTw/view?usp=share_link" width="20px"/></a>
+<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" width="20px"/></a>
