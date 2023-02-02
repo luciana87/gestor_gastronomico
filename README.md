@@ -48,6 +48,6 @@ Este es el proyecto final con nota individual del curso como desarrolladora back
 
 Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquiera de mis redes sociales.
 
-<a href="mailto:ch.luciana87@gmail.com" name="Gmail"><img src="https://iconos8.es/icons/set/gmail" width="20px"></a>
+<a href="mailto:ch.luciana87@gmail.com" name="Gmail"><img src="https://drive.google.com/file/d/1NgAbAHIOo10mZANFpEQIA5uboKeXcKtJ/view?usp=share_link" width="20px"></a>
 
-<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="LinkedIn"><img src="https://iconos8.es/icons/set/linkedi" width="20px"/></a>
+<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="LinkedIn"><img src="https://drive.google.com/file/d/1VNyi5i573AXTxIVCLXZY5WMAaY91OXTw/view?usp=share_link" width="20px"/></a>
