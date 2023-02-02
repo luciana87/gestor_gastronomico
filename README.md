@@ -48,6 +48,6 @@ Este es el proyecto final con nota individual del curso como desarrolladora back
 
 Si te gustó mi proyecto y te interesa mi trabajo, podés contactarme a cualquiera de mis redes sociales.
 
-<a href="mailto:ch.luciana87@gmail.com" name="Gmail"><img src="https://img.icons8.com/ios-filled/50/null/gmail.png" width="20px" alt="icon gmail">Gmail></a>
+<a href="mailto:ch.luciana87@gmail.com" name="Gmail" style="color: black; font-weight: 700; display: flex; align-items: center;"><img src="https://img.icons8.com/ios-filled/50/null/gmail.png" width="20px" alt="icon gmail" style="margin-right: 5px;">Gmail</a>
 
-<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" width="20px" alt="icon linkedin">LinkedIn</a>
+<a href="http://linkedin.com/in/luciana-chaparro-39521221a" name="linkedin" style="color: black; font-weight: 700; display: flex; align-items: center;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" width="15px" alt="icon linkedin" style="margin-right: 5px;">Linkedin</a>
